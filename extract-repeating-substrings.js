@@ -45,18 +45,18 @@ export function extractRepeatingSubstrings(str) {
 	for (let k = 2; k <= gm; k++) {
 		if (gm % k !== 0) continue;
 		// test str split into k pieces
-		const test = str.substring(0, str.length / k);
-		if (isRepeating(str, test)) {
-			substrings.push(test);
+		if (isRepeating(str, str.length / k)) {
+			// repeating substring found
+			substrings.push(str.substring(0, str.length / k));
 		}
 	}
 
 	return substrings;
 }
 
-function isRepeating(str, sub) {
+function isRepeating(str, len) {
 	for (let i = 0; i < str.length; i++) {
-		if (str[i] !== sub[i % sub.length]) {
+		if (str[i] !== str[i % len]) {
 			return false;
 		}
 	}
