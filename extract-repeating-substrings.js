@@ -32,7 +32,7 @@ export function extractRepeatingSubstrings(str) {
 	for (const ch of str) freq[ch] = (freq[ch] || 0) + 1;
 
 	// find gcd
-	let gm = 0; // GCD(0, x) is always x, making 0 the perfect starter
+	let gm = 0;
 	for (const key in freq) {
 		// Update the running GCD with the current value
 		gm = gcd(gm, freq[key]);
