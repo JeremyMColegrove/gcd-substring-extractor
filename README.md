@@ -28,15 +28,18 @@ The algorithm operates in four distinct phases:
 #### **Phase 1: Frequency Map Construction**
 
 Iterating over the string to count characters.
+
 _Cost_: $O(N)$
 
 #### **Phase 2: GCD Computation**
 Calculating the GCD of the frequency values.
+
 _Cost_: Negligible ($O(|\Sigma|)$).
 
 #### **Phase 3 & 4: The Divisor Loop and Validation**
 We iterate through all divisors of $G$ and perform a check of cost $O(N)$ for each.
-_Cost_: $O(N \times d(G))$Where $d(G)$ is the number of divisors of the GCD.
+
+_Cost_: $O(N \times d(G))$ Where $d(G)$ is the number of divisors of the GCD.
 
 #### **Total Time Complexity Calculation**
 
