@@ -1,4 +1,4 @@
-# GCD-substring
+# Greatest Common Divisor Repeating Substring
 
 Algorithm Analysis: GCD-Based All Repeating Substring Detection
 
